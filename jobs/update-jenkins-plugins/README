@@ -1,0 +1,21 @@
+Installation
+============
+
+1. Get the Jenkins cli tool
+
+```
+wget http://localhost:8080/jnlpJars/jenkins-cli.jar
+```
+
+2. Download the template and install it
+
+```
+curl -L https://raw.githubusercontent.com/PortNumber53/jenkins-ci-stuff/master/jobs/update-jenkins-plugins/config.xml | java -jar jenkins-cli.jar -s http://localhost:8080 create-job update-jenkins-plugins
+```
+
+3. Reload Jenkins configuration
+
+```
+java -jar jenkins-cli.jar -s http://localhost:8080 reload-configuration
+```
+
